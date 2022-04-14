@@ -1,0 +1,14 @@
+apiVersion: xl-deploy/v1
+kind: Environments
+spec:
+- name: AWS Dictionary
+  type: udm.Dictionary
+  entries:
+    region: eu-west-1
+    username: aws-user
+- name: AWS
+  type: udm.Environment
+  members:
+  - ~Infrastructure/aws
+  dictionaries:
+  - ~Environments/AWS Dictionary
